@@ -21,7 +21,6 @@
       body{
         font-weight: 700;
         font-family: 'Montserrat', sans-serif;
-        position: relative;
         background:
           url(images/bg-top.svg) no-repeat top right fixed,
           url(images/bg-bottom.svg) no-repeat bottom left fixed;
@@ -30,7 +29,6 @@
       .attribution {
         text-align: center;
         display: flex;
-        margin-top:50px;
         justify-content: space-around;
         color:white;
         align-items: center;
@@ -42,81 +40,93 @@
       }
       .heading{
         text-align: center;
-        margin-top: 80px;
         color: hsl(234, 14%, 74%);
+        margin-top: 2%;
       }
       .mainheading{
         text-align: center;
-        margin-top: 80px;
         color: hsl(231, 3%, 49%);
+        margin-top: 5%;
+      }
+
+
+      /* Start making changes here */
+      .container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin:4%;
+      }
+      .pricingCard{
+        width: 70vw;
+        display:flex;
+        align-items: center;
+        justify-content: center;
       }
       .divider{
-        width: 275px;
+        /* width: 275px; */
+        width:70%;
         color: hsl(234, 14%, 74%);
       }
       button{
         width:80%;
-        padding: 10px 10px 10px 10px;
-        margin:20px 20px 20px 20px;
         background-color: white;
         color: hwb(228 51% 7%);
         font-size: 15px;
         border-radius: 10px;
         cursor: pointer;
+        padding: 10px;
+        margin:2% 5% 5% 5%;
       }
       .middle{
-        width:350px;
+        /* width:350px; */
+        /* height:68vh; */
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        text-align: center;
+        justify-content: space-around;
+        color:white;
+        align-items: center;
+        /* font-size: 15px; */
+        width:30%;
         background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
         border-radius: 10px;
-        margin-left: -800px;
+        box-shadow: 0 0.6rem 1.6rem #b3b5c6;
       }
       .price{
         font-size: 60px;
         text-align: center;
-        margin-top: -10px;
-      }
-      .content{
-        padding: 10px 10px 10px 10px;
-     
       }
       .box-heading{
-        margin-top: 50px;
         font-size: 15px;
       }
       .basic{
-        float: left;
-        width: 300px;
-        margin-top: 75px;
+        /* width: 80vw; */
+        /* margin-top: 75px; */
+        width:30%;
         background-color: white;
         text-align: center;
-        padding-left: 45px;
-        padding-right: 30px;
-        margin-left: 425px;
         border-radius: 10px;
+        box-shadow: 0 0.6rem 1.6rem #b3b5c6;
+
       }
       .master{
-        float: right;
-        width: 300px;
-        margin-top: -450px;
+        /* width: 300px; */
+        width:30%;
         background-color: white;
         text-align: center;
-        padding-left: 80px;
-        padding-right: 30px;
-        margin-right: 425px;
         border-radius: 10px;
+        box-shadow: 0 0.6rem 1.6rem #b3b5c6;
+
       }
       .basicdivider{
         color: hsl(234, 14%, 74%);
         width: 275px;
       }
       .basicButton{
-        width: 100%;
+        width: 80%;
         background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
         color:white;
-        margin-left: -7px;
-      }
-      .basiccontent{
-        padding: 5px 5px 5px 5px;
       }
       .toggle {
         position : relative ;
@@ -150,45 +160,43 @@
     .checkbox { 
         display : none;
     }
-   @media (max-width:375px){
+    @media (max-width: 1200px){
+      .price{
+        font-size: 55px;
+      }
+    }
+    @media (max-width: 1050px){
+      .price{
+        font-size: 50px;
+      }
+    }
+    @media (max-width: 950px){
+      .price{
+        font-size: 45px;
+      }
+    }
+    @media (max-width: 850px){
+      .price{
+        font-size: 40px;
+      }
+    }
+    @media (max-width: 750px){
+      .pricingCard{
+        display: flex;
+        flex-direction: column;
+        width:95vw;
+      }
       .basic{
-        float: none;
-        width: 300px;
-        margin-top: 75px;
-        background-color: white;
-        text-align: center;
-        padding-left: 25px;
-        padding-right: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        border-radius: 10px;
-        margin-bottom: -25px;
+        width:80%;
       }
       .middle{
-        width:350px;
-        background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-        border-radius: 10px;
-        margin-left: 10px;
-      }
-      .basic-heading{
-        padding-top: 40px;
+        width:80%;
       }
       .master{
-        float: none;
-        width: 300px;
-        margin-top: 30px;
-        background-color: white;
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 10px;
-        margin-right: 20px;
-        margin-left: 20px;
-        border-radius: 10px;
+        width:80%;
       }
-      .Master-heading{
-        padding-top: 40px;
-      }
-   }
+    }
+   
     </style>
   </head>
   <body>
@@ -203,22 +211,24 @@
 </label>
  Monthly</h3>
 </div>
+<div class="container">
+<div class="pricingCard">
 <div class="basic">
   <div>
   <p class="basic-heading">Basic</p>
   <h1 class="price" id="basicPricing">&dollar;19.99</h1>
-  <hr class="basicdivider">
+  <hr class="divider">
   <p class="basiccontent">500 GB Storage</p>
-  <hr class="basicdivider">
+  <hr class="divider">
   <p class="basiccontent">2 Users Allowed</p>
-  <hr class="basicdivider">
+  <hr class="divider">
   <p class="basiccontent">Send up to 3 GB</p>
-  <hr class="basicdivider">
+  <hr class="divider">
   <button class="basicButton">Learn More</button>
   </div>
   </div>
-</div>
-    <div class="attribution">
+
+  
       <div class="middle">
       <p class="box-heading">Professional</p>
       <h1 class="price" id="professionalPricing">&dollar;24.99</h1>
@@ -231,23 +241,26 @@
       <hr class="divider">
       <button>Learn More</button>
       </div>
-      </div>
+      
    
     <div class="master">
       <div>
       <p class="Master-heading">Master</p>
       <h1 class="price" id="masterPricing">&dollar;39.99</h1>
-      <hr class="basicdivider">
+      <hr class="divider">
       <p class="basiccontent">2 TB Storage</p>
-      <hr class="basicdivider">
+      <hr class="divider">
       <p class="basiccontent">10 Users Allowed</p>
-      <hr class="basicdivider">
+      <hr class="divider">
       <p class="basiccontent">Send up to 20 GB</p>
-      <hr class="basicdivider">
+      <hr class="divider">
       <button class="basicButton">Learn More</button>
       </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
     <script src="button.js"></script>
   </body>
 </html>
