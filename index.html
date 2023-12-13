@@ -21,10 +21,11 @@
       body{
         font-weight: 700;
         font-family: 'Montserrat', sans-serif;
-        background-color: hsl(240, 78%, 98%);
+        position: relative;
         background:
           url(images/bg-top.svg) no-repeat top right fixed,
           url(images/bg-bottom.svg) no-repeat bottom left fixed;
+          background-color: hsl(240, 78%, 98%);
       }
       .attribution {
         text-align: center;
@@ -122,7 +123,7 @@
         display : inline-block;
         width : 60px;
         height : 32px;
-        background-color:hsl(236, 72%, 79%);
+        background-color:hsl(240, 2%, 64%);
         border-radius: 30px;
         margin-left: 25px;
         margin-right: 25px;
@@ -205,7 +206,7 @@
 <div class="basic">
   <div>
   <p class="basic-heading">Basic</p>
-  <h1 class="price">&dollar;19.99</h1>
+  <h1 class="price" id="basicPricing">&dollar;19.99</h1>
   <hr class="basicdivider">
   <p class="basiccontent">500 GB Storage</p>
   <hr class="basicdivider">
@@ -220,7 +221,7 @@
     <div class="attribution">
       <div class="middle">
       <p class="box-heading">Professional</p>
-      <h1 class="price">&dollar;24.99</h1>
+      <h1 class="price" id="professionalPricing">&dollar;24.99</h1>
       <hr class="divider">
       <p class="content">1 TB Storage</p>
       <hr class="divider">
@@ -235,7 +236,7 @@
     <div class="master">
       <div>
       <p class="Master-heading">Master</p>
-      <h1 class="price">&dollar;39.99</h1>
+      <h1 class="price" id="masterPricing">&dollar;39.99</h1>
       <hr class="basicdivider">
       <p class="basiccontent">2 TB Storage</p>
       <hr class="basicdivider">
@@ -247,5 +248,6 @@
       </div>
       </div>
     </div>
+    <script src="button.js"></script>
   </body>
 </html>
