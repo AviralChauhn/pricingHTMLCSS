@@ -5,23 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
   var mastercontent = document.getElementById("masterPricing");
   toggleButton.addEventListener("change", function () {
     if (toggleButton.checked) {
-      basiccontent.innerHTML = "&dollar;19.99";
+      basiccontent.innerHTML = "<span>&dollar;</span>19.99";
     } else {
-      basiccontent.innerHTML = "&dollar;199.99";
+      basiccontent.innerHTML = "<span>&dollar;</span>199.99";
     }
   });
   toggleButton.addEventListener("change", function () {
     if (toggleButton.checked) {
-      professionalcontent.innerHTML = "&dollar;24.99";
+      professionalcontent.innerHTML = "<span>&dollar;</span>24.99";
     } else {
-      professionalcontent.innerHTML = "&dollar;249.99";
+      professionalcontent.innerHTML = "<span>&dollar;</span>249.99";
     }
   });
   toggleButton.addEventListener("change", function () {
     if (toggleButton.checked) {
-      mastercontent.innerHTML = "&dollar;39.99";
+      mastercontent.innerHTML = "<span>&dollar;</span>39.99";
     } else {
-      mastercontent.innerHTML = "&dollar;399.99";
+      mastercontent.innerHTML = "<span>&dollar;</span>399.99";
     }
   });
 });
